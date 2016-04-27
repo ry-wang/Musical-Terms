@@ -5,43 +5,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Musical_Terms" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="672" y="420"/>
-        </scene>
-        <!--Main Table View Controller-->
+        <!--Term Table View Controller-->
         <scene sceneID="teR-92-3pw">
             <objects>
-                <tableViewController id="NA8-eO-zx5" customClass="MainTableViewController" customModule="Musical_Terms" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d0K-xV-x8y">
+                <tableViewController id="NA8-eO-zx5" customClass="TermTableViewController" customModule="Musical_Terms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="d0K-xV-x8y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="x14-VQ-LeN">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TermTableViewCell" id="x14-VQ-LeN" customClass="TermTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x14-VQ-LeN" id="dII-SS-bSe">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-wJ-DFY">
-                                            <rect key="frame" x="30" y="30" width="355" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-wJ-DFY" userLabel="musicTerm">
+                                            <rect key="frame" x="60" y="14" width="325" height="42"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -49,11 +31,11 @@
                                 </tableViewCellContentView>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7rn-wJ-DFY" secondAttribute="trailing" constant="215" id="WDz-Wx-YUt"/>
-                                    <constraint firstItem="7rn-wJ-DFY" firstAttribute="leading" secondItem="x14-VQ-LeN" secondAttribute="leading" constant="30" id="oWV-7v-5Yx"/>
+                                    <constraint firstItem="7rn-wJ-DFY" firstAttribute="leading" secondItem="x14-VQ-LeN" secondAttribute="leading" constant="60" id="oWV-7v-5Yx"/>
                                     <constraint firstItem="7rn-wJ-DFY" firstAttribute="centerY" secondItem="x14-VQ-LeN" secondAttribute="centerY" id="veC-a3-3Bd"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="GpM-Kp-QMR"/>
+                                    <outlet property="musicTerm" destination="7rn-wJ-DFY" id="uRH-4l-XYJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
