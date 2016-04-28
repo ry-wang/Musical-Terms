@@ -15,7 +15,7 @@
 		94641DE11CD0624800C1164B /* Musical_TermsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DE01CD0624800C1164B /* Musical_TermsTests.swift */; };
 		94641DEC1CD0624800C1164B /* Musical_TermsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DEB1CD0624800C1164B /* Musical_TermsUITests.swift */; };
 		946C50141CD0697700622506 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C50131CD0697700622506 /* Term.swift */; };
-		946C50161CD06EDE00622506 /* TermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C50151CD06EDE00622506 /* TermTableViewCell.swift */; };
+		94CBC75E1CD1A98E007572D4 /* TermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		94641DEB1CD0624800C1164B /* Musical_TermsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_TermsUITests.swift; sourceTree = "<group>"; };
 		94641DED1CD0624800C1164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946C50131CD0697700622506 /* Term.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Term.swift; path = ../Term.swift; sourceTree = "<group>"; };
-		946C50151CD06EDE00622506 /* TermTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermTableViewCell.swift; sourceTree = "<group>"; };
+		94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 			children = (
 				94641DCB1CD0624700C1164B /* AppDelegate.swift */,
 				946C50131CD0697700622506 /* Term.swift */,
-				946C50151CD06EDE00622506 /* TermTableViewCell.swift */,
 				94641DCD1CD0624700C1164B /* TermTableViewController.swift */,
+				94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */,
 				94641DCF1CD0624800C1164B /* Main.storyboard */,
 				94641DD21CD0624800C1164B /* Assets.xcassets */,
 				94641DD41CD0624800C1164B /* LaunchScreen.storyboard */,
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94641DCE1CD0624700C1164B /* TermTableViewController.swift in Sources */,
-				946C50161CD06EDE00622506 /* TermTableViewCell.swift in Sources */,
+				94CBC75E1CD1A98E007572D4 /* TermTableViewCell.swift in Sources */,
 				94641DCC1CD0624700C1164B /* AppDelegate.swift in Sources */,
 				946C50141CD0697700622506 /* Term.swift in Sources */,
 			);

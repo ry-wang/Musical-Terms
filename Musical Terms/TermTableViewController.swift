@@ -13,9 +13,11 @@ class TermTableViewController: UITableViewController {
     var table = [Term]()
     
     func loadTable() {
-        let term0 = Term(text: "pianissimo", category: "dynamics")
-        table+=[term0]
         
+        let term0 = Term(text: "pianissimo", category: "dynamics")
+        let term1 = Term(text: "piano", category: "dynamics")
+        
+        table += [term0, term1]
     }
 
     override func viewDidLoad() {
@@ -25,7 +27,8 @@ class TermTableViewController: UITableViewController {
         loadTable()
         
         //print("table loaded")
-        //print(table[0].text)
+        print(table[0].text)
+        print(table[1].text)
     }
 
     override func didReceiveMemoryWarning() {

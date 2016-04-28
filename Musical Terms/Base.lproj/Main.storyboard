@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TermTableViewCell" id="x14-VQ-LeN" customClass="TermTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TermTableViewCell" id="x14-VQ-LeN" customClass="TermTableViewCell" customModule="Musical_Terms" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x14-VQ-LeN" id="dII-SS-bSe">
@@ -22,7 +22,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-wJ-DFY" userLabel="musicTerm">
-                                            <rect key="frame" x="60" y="14" width="325" height="42"/>
+                                            <rect key="frame" x="60" y="14" width="495" height="42"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -30,8 +30,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="7rn-wJ-DFY" secondAttribute="trailing" constant="215" id="WDz-Wx-YUt"/>
                                     <constraint firstItem="7rn-wJ-DFY" firstAttribute="leading" secondItem="x14-VQ-LeN" secondAttribute="leading" constant="60" id="oWV-7v-5Yx"/>
+                                    <constraint firstAttribute="trailing" secondItem="7rn-wJ-DFY" secondAttribute="trailing" constant="45" id="sbD-83-AUV"/>
                                     <constraint firstItem="7rn-wJ-DFY" firstAttribute="centerY" secondItem="x14-VQ-LeN" secondAttribute="centerY" id="veC-a3-3Bd"/>
                                 </constraints>
                                 <connections>
