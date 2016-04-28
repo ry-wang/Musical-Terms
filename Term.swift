@@ -9,14 +9,22 @@
 import Foundation
 
 class Term {
+    
     //Text of the term
     var text = ""
     //Category of the term
     var category = ""
+    //Definiton of term
+    var definition = ""
     
     //Constructor
     init(text: String, category: String) {
         self.text = text
         self.category = category
+    }
+    
+    //Function for setting definition
+    func setDefinition(input: String) {
+        definition = input
     }
 }

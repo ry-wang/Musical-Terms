@@ -11,11 +11,15 @@ import UIKit
 class TermTableViewController: UITableViewController {
     
     var table = [Term]()
+    var data: Term!
     
     func loadTable() {
         
-        let term0 = Term(text: "pianissimo", category: "dynamics")
-        let term1 = Term(text: "piano", category: "dynamics")
+        let term0 = Term(text: "Pianissimo", category: "dynamics")
+        let term1 = Term(text: "Piano", category: "dynamics")
+        
+        term0.definition = "very soft"
+        term1.definition = "soft"
         
         table += [term0, term1]
     }
@@ -26,9 +30,8 @@ class TermTableViewController: UITableViewController {
         //Load data into table
         loadTable()
         
-        //print("table loaded")
-        print(table[0].text)
-        print(table[1].text)
+        //Debug statement
+        print("table loaded")
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +55,33 @@ class TermTableViewController: UITableViewController {
         
         cell.musicTerm.text = a.text
         return cell
+    }
+    
+    //Function that's called when cell is pressed
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //Debug statement
+        print("pressed")
+        
+        data = Term(text: "", category: "")
+        data.text = table[indexPath.row].text
+        data.category = table[indexPath.row].category
+        data.definition = table[indexPath.row].definition
+        self.performSegueWithIdentifier("openDetails", sender: nil)
+    }
+    
+    //Function to prepare for segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "openDetails") {
+            //Debug statement
+            print("segue occuring")
+            
+            let detailsVC = segue.destinationViewController as! DetailsViewController
+            //let details = data
+            
+            //print(data.category)
+            
+            detailsVC.details = data
+        }
     }
 
     

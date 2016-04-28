@@ -16,6 +16,7 @@
 		94641DEC1CD0624800C1164B /* Musical_TermsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DEB1CD0624800C1164B /* Musical_TermsUITests.swift */; };
 		946C50141CD0697700622506 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C50131CD0697700622506 /* Term.swift */; };
 		94CBC75E1CD1A98E007572D4 /* TermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */; };
+		94CBC7601CD1BBBF007572D4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		94641DED1CD0624800C1164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946C50131CD0697700622506 /* Term.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Term.swift; path = ../Term.swift; sourceTree = "<group>"; };
 		94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermTableViewCell.swift; sourceTree = "<group>"; };
+		94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				946C50131CD0697700622506 /* Term.swift */,
 				94641DCD1CD0624700C1164B /* TermTableViewController.swift */,
 				94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */,
+				94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */,
 				94641DCF1CD0624800C1164B /* Main.storyboard */,
 				94641DD21CD0624800C1164B /* Assets.xcassets */,
 				94641DD41CD0624800C1164B /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				94CBC75E1CD1A98E007572D4 /* TermTableViewCell.swift in Sources */,
 				94641DCC1CD0624700C1164B /* AppDelegate.swift in Sources */,
 				946C50141CD0697700622506 /* Term.swift in Sources */,
+				94CBC7601CD1BBBF007572D4 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
