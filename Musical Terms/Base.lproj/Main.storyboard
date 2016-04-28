@@ -39,7 +39,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="musicTerm" destination="7rn-wJ-DFY" id="uRH-4l-XYJ"/>
-                                    <segue destination="ViJ-UB-ll4" kind="show" identifier="openDetails" id="EsM-DW-aRk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,6 +48,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Musical Terms" id="8D0-vm-Ddk"/>
+                    <connections>
+                        <segue destination="ViJ-UB-ll4" kind="show" identifier="openDetails" id="nio-3G-SyH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MG-y2-GyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,19 +69,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-PA-Ayb" userLabel="termLabel">
-                                <rect key="frame" x="106" y="50" width="388" height="36"/>
+                                <rect key="frame" x="106" y="104" width="388" height="36"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3K-id-zjj" userLabel="definitionLabel">
-                                <rect key="frame" x="260" y="154" width="80" height="24"/>
+                                <rect key="frame" x="260" y="208" width="80" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mao-sc-ODR" userLabel="categoryLabel">
-                                <rect key="frame" x="258" y="101" width="85" height="24"/>
+                                <rect key="frame" x="258" y="155" width="85" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +89,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n1V-PA-Ayb" firstAttribute="top" secondItem="3j8-ko-g1w" secondAttribute="bottom" constant="30" id="253-0q-5dm"/>
+                            <constraint firstItem="n1V-PA-Ayb" firstAttribute="top" secondItem="3j8-ko-g1w" secondAttribute="bottom" constant="40" id="253-0q-5dm"/>
                             <constraint firstItem="d3K-id-zjj" firstAttribute="top" secondItem="n1V-PA-Ayb" secondAttribute="bottom" constant="68" id="42g-NU-ckd"/>
                             <constraint firstItem="mao-sc-ODR" firstAttribute="top" secondItem="n1V-PA-Ayb" secondAttribute="bottom" constant="15" id="Gwg-HU-Veq"/>
                             <constraint firstItem="d3K-id-zjj" firstAttribute="centerX" secondItem="n1V-PA-Ayb" secondAttribute="centerX" id="Op6-Ub-wqU"/>

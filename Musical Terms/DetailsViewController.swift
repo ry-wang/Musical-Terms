@@ -20,16 +20,13 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        details = Term(text: "", category: "")
-        details.definition = ""
         setup()
     }
     
     func setup() {
-        termLabel.text = details.text
+        termLabel.text = details.word
         categoryLabel.text = details.category
         definitionLabel.text = details.definition
     }
-    
 
 }

@@ -12,11 +12,12 @@ class TermTableViewController: UITableViewController {
     
     var table = [Term]()
     var data: Term!
+
     
     func loadTable() {
         
-        let term0 = Term(text: "Pianissimo", category: "dynamics")
-        let term1 = Term(text: "Piano", category: "dynamics")
+        let term0 = Term(text: "Pianissimo", category: "Dynamics")
+        let term1 = Term(text: "Piano", category: "Dynamics")
         
         term0.definition = "very soft"
         term1.definition = "soft"
@@ -53,19 +54,18 @@ class TermTableViewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let a = table[indexPath.row]
         
-        cell.musicTerm.text = a.text
+        cell.musicTerm.text = a.word
         return cell
     }
+    
+    //IN PROGRESS
     
     //Function that's called when cell is pressed
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //Debug statement
         print("pressed")
         
-        data = Term(text: "", category: "")
-        data.text = table[indexPath.row].text
-        data.category = table[indexPath.row].category
-        data.definition = table[indexPath.row].definition
+        self.data = table[indexPath.row]
         self.performSegueWithIdentifier("openDetails", sender: nil)
     }
     
@@ -76,11 +76,7 @@ class TermTableViewController: UITableViewController {
             print("segue occuring")
             
             let detailsVC = segue.destinationViewController as! DetailsViewController
-            //let details = data
-            
-            //print(data.category)
-            
-            detailsVC.details = data
+            detailsVC.details = self.data
         }
     }
 

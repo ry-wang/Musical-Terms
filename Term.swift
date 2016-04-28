@@ -11,7 +11,7 @@ import Foundation
 class Term {
     
     //Text of the term
-    var text = ""
+    var word = ""
     //Category of the term
     var category = ""
     //Definiton of term
@@ -19,7 +19,7 @@ class Term {
     
     //Constructor
     init(text: String, category: String) {
-        self.text = text
+        self.word = text
         self.category = category
     }
     
