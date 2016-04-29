@@ -11,28 +11,37 @@ import UIKit
 class TermTableViewController: UITableViewController {
     
     var table = [Term]()
+    var filteredTable = [Term]()
     var data: Term!
-
     
-    func loadTable() {
-        
-        let term0 = Term(text: "Pianissimo", category: "Dynamics")
-        let term1 = Term(text: "Piano", category: "Dynamics")
-        
-        term0.definition = "very soft"
-        term1.definition = "soft"
-        
-        table += [term0, term1]
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    func filterTableForSearchContent(searchText: String, scope: String = "All") {
+        filteredTable = table.filter { Term in
+            return Term.word.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        tableView.reloadData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
+
         //Load data into table
         loadTable()
         
         //Debug statement
         print("table loaded")
+        
+        //Setting up search bar
+        searchController.searchBar.tintColor = UIColor.whiteColor()
+        searchController.searchBar.barTintColor = UIColor.grayColor()
+        searchController.searchBar.placeholder = "Search for a term"
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +53,9 @@ class TermTableViewController: UITableViewController {
         return 1
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.active && searchController.searchBar.text != "" {
+            return filteredTable.count
+        }
         return table.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,21 +63,31 @@ class TermTableViewController: UITableViewController {
         let cellIdentifier = "TermTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TermTableViewCell
         
+        let a: Term!
+        
         // Fetches the appropriate meal for the data source layout.
-        let a = table[indexPath.row]
+        if (searchController.active && searchController.searchBar.text != "") {
+            a = filteredTable[indexPath.row]
+        }
+        else {
+            a = table[indexPath.row]
+        }
         
         cell.musicTerm.text = a.word
         return cell
     }
-    
-    //IN PROGRESS
     
     //Function that's called when cell is pressed
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //Debug statement
         print("pressed")
         
-        self.data = table[indexPath.row]
+        if (searchController.active && searchController.searchBar.text != "") {
+            self.data = filteredTable[indexPath.row]
+        }
+        else {
+            self.data = table[indexPath.row]
+        }
         self.performSegueWithIdentifier("openDetails", sender: nil)
     }
     
@@ -79,8 +101,11 @@ class TermTableViewController: UITableViewController {
             detailsVC.details = self.data
         }
     }
+}
 
-    
-
+extension TermTableViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterTableForSearchContent(searchController.searchBar.text!)
+    }
 }
 

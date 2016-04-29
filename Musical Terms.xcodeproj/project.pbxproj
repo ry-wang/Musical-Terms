@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9443CD771CD2F3C5008C2B12 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9443CD761CD2F3C5008C2B12 /* MainNavigationController.swift */; };
+		9443CD791CD30B85008C2B12 /* LoadTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9443CD781CD30B85008C2B12 /* LoadTerms.swift */; };
 		94641DCC1CD0624700C1164B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DCB1CD0624700C1164B /* AppDelegate.swift */; };
 		94641DCE1CD0624700C1164B /* TermTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DCD1CD0624700C1164B /* TermTableViewController.swift */; };
 		94641DD11CD0624800C1164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94641DCF1CD0624800C1164B /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9443CD761CD2F3C5008C2B12 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9443CD781CD30B85008C2B12 /* LoadTerms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTerms.swift; sourceTree = "<group>"; };
 		94641DC81CD0624700C1164B /* Musical Terms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Terms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94641DCB1CD0624700C1164B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94641DCD1CD0624700C1164B /* TermTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermTableViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 			children = (
 				94641DCB1CD0624700C1164B /* AppDelegate.swift */,
 				946C50131CD0697700622506 /* Term.swift */,
+				9443CD761CD2F3C5008C2B12 /* MainNavigationController.swift */,
 				94641DCD1CD0624700C1164B /* TermTableViewController.swift */,
+				9443CD781CD30B85008C2B12 /* LoadTerms.swift */,
 				94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */,
 				94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */,
 				94641DCF1CD0624800C1164B /* Main.storyboard */,
@@ -268,9 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9443CD771CD2F3C5008C2B12 /* MainNavigationController.swift in Sources */,
 				94641DCE1CD0624700C1164B /* TermTableViewController.swift in Sources */,
 				94CBC75E1CD1A98E007572D4 /* TermTableViewCell.swift in Sources */,
 				94641DCC1CD0624700C1164B /* AppDelegate.swift in Sources */,
+				9443CD791CD30B85008C2B12 /* LoadTerms.swift in Sources */,
 				946C50141CD0697700622506 /* Term.swift in Sources */,
 				94CBC7601CD1BBBF007572D4 /* DetailsViewController.swift in Sources */,
 			);
