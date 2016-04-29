@@ -26,6 +26,8 @@ class DetailsViewController: UIViewController {
     
     func setup() {
         termLabel.text = details.word
+        termLabel.lineBreakMode = .ByWordWrapping
+        termLabel.numberOfLines = 0
         categoryLabel.text = details.category
         definitionLabel.text = details.definition
     }

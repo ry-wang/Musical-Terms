@@ -31,9 +31,6 @@ class TermTableViewController: UITableViewController {
         //Load data into table
         loadTable()
         
-        //Debug statement
-        print("table loaded")
-        
         //Setting up search bar
         searchController.searchBar.tintColor = UIColor.whiteColor()
         searchController.searchBar.barTintColor = UIColor.grayColor()
