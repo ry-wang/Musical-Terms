@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-wJ-DFY" userLabel="musicTerm">
-                                            <rect key="frame" x="50" y="10" width="505" height="30"/>
+                                            <rect key="frame" x="30" y="10" width="525" height="30"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.28010817307692304" green="0.28010817307692304" blue="0.28010817307692304" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="7rn-wJ-DFY" firstAttribute="leading" secondItem="x14-VQ-LeN" secondAttribute="leading" constant="50" id="oWV-7v-5Yx"/>
+                                    <constraint firstItem="7rn-wJ-DFY" firstAttribute="leading" secondItem="x14-VQ-LeN" secondAttribute="leading" constant="30" id="oWV-7v-5Yx"/>
                                     <constraint firstAttribute="trailing" secondItem="7rn-wJ-DFY" secondAttribute="trailing" constant="45" id="sbD-83-AUV"/>
                                     <constraint firstItem="7rn-wJ-DFY" firstAttribute="centerY" secondItem="x14-VQ-LeN" secondAttribute="centerY" id="veC-a3-3Bd"/>
                                 </constraints>

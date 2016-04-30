@@ -55,6 +55,11 @@ extension TermTableViewController {
         let t17 = Term(text: "Moderato", category: "Tempo")
         let t18 = Term(text: "Allegretto", category: "Tempo")
         
+        let t19 = Term(text: "Allegro", category: "Tempo")
+        let t20 = Term(text: "Presto", category: "Tempo")
+        let t21 = Term(text: "Prestissimo", category: "Tempo")
+        
+        
         t11.definition = "very slow and broad, 40-60bpm"
         t12.definition = "less slow than largo, 60-66bpm"
         t13.definition = "slow, 50-66bpm"
@@ -65,7 +70,12 @@ extension TermTableViewController {
         t17.definition = "moderate speed, 108-120bpm"
         t18.definition = "farily quick, 114-120bpm"
         
+        t19.definition = "lively, fast, 120-168bpm"
+        t20.definition = "very fast, 168 - 200bpm"
+        t21.definition = "as fast as possible, 200+bpm"
+        
         table+=[t11, t12, t13, t14, t15, t16, t17, t18]
+        table+=[t19, t20, t21]
         
         print("table loaded")
 
