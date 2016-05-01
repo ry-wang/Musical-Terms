@@ -17,6 +17,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var definitionLabel: UILabel!
     
     var details: Term!
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +29,11 @@ class DetailsViewController: UIViewController {
     
     func setup() {
         termLabel.text = details.word
-        termLabel.lineBreakMode = .ByWordWrapping
-        termLabel.numberOfLines = 0
+        
         categoryLabel.text = details.category
+        
         definitionLabel.text = details.definition
+        definitionLabel.preferredMaxLayoutWidth = screenSize.width - 28
     }
 
 }

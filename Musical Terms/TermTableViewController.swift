@@ -62,14 +62,14 @@ class TermTableViewController: UITableViewController {
         
         let a: Term!
         
-        // Fetches the appropriate meal for the data source layout.
+        //Gets either the full table or the filtered one if a search is in progress, store it in a termp variable
         if (searchController.active && searchController.searchBar.text != "") {
             a = filteredTable[indexPath.row]
         }
         else {
             a = table[indexPath.row]
         }
-        
+        //Set the text of the cell to match the text in the temp variable
         cell.musicTerm.text = a.word
         return cell
     }

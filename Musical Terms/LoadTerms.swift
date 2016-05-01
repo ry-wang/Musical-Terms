@@ -77,6 +77,40 @@ extension TermTableViewController {
         table+=[t11, t12, t13, t14, t15, t16, t17, t18]
         table+=[t19, t20, t21]
         
+        //WORDS RELATED TO TEMPO
+        let t22 = Term(text: "A Tempo", category: "Tempo")
+        let t23 = Term(text: "Accelerando", category: "Tempo")
+        let t24 = Term(text: "Allargando", category: "Tempo")
+        let t25 = Term(text: "L'istesso Tempo", category: "Tempo")
+        
+        let t26 = Term(text: "Meno Mosso", category: "Tempo")
+        let t27 = Term(text: "Più Mosso", category: "Tempo")
+        let t28 = Term(text: "Rallentando", category: "Tempo")
+        let t29 = Term(text: "Ritardando", category: "Tempo")
+        
+        let t30 = Term(text: "Ritenuto", category: "Tempo")
+        let t31 = Term(text: "Rubato", category: "Tempo")
+        let t32 = Term(text: "Stringendo", category: "Tempo")
+        let t33 = Term(text: "Tempo Primo", category: "Tempo")
+        
+        t22.definition = "in time; return to tempo prior to change"
+        t23.definition = "becoming quicker"
+        t24.definition = "broadening, becoming slower"
+        t25.definition = "at the same tempo"
+        
+        t26.definition = "less movement, slower"
+        t27.definition = "more movement, quicker"
+        t28.definition = "slowing down gradually"
+        t29.definition = "slowing down gradually"
+        
+        t30.definition = "suddenly slower, held back"
+        t31.definition = "flexible tempo, using slight variations of speed to enhance expression"
+        t32.definition = "pressing, becoming faster"
+        t33.definition = "return to the original tempo"
+        
+        table+=[t22, t23, t24, t25, t26, t27, t28, t29, t30, t31,t32, t33]
+        
+        
         print("table loaded")
 
     }

@@ -13,7 +13,6 @@
 		94641DCE1CD0624700C1164B /* TermTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DCD1CD0624700C1164B /* TermTableViewController.swift */; };
 		94641DD11CD0624800C1164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94641DCF1CD0624800C1164B /* Main.storyboard */; };
 		94641DD31CD0624800C1164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94641DD21CD0624800C1164B /* Assets.xcassets */; };
-		94641DD61CD0624800C1164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94641DD41CD0624800C1164B /* LaunchScreen.storyboard */; };
 		94641DE11CD0624800C1164B /* Musical_TermsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DE01CD0624800C1164B /* Musical_TermsTests.swift */; };
 		94641DEC1CD0624800C1164B /* Musical_TermsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DEB1CD0624800C1164B /* Musical_TermsUITests.swift */; };
 		946C50141CD0697700622506 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946C50131CD0697700622506 /* Term.swift */; };
@@ -46,7 +45,6 @@
 		94641DCD1CD0624700C1164B /* TermTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermTableViewController.swift; sourceTree = "<group>"; };
 		94641DD01CD0624800C1164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94641DD21CD0624800C1164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94641DD51CD0624800C1164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94641DD71CD0624800C1164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94641DDC1CD0624800C1164B /* Musical TermsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Musical TermsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94641DE01CD0624800C1164B /* Musical_TermsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_TermsTests.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */,
 				94641DCF1CD0624800C1164B /* Main.storyboard */,
 				94641DD21CD0624800C1164B /* Assets.xcassets */,
-				94641DD41CD0624800C1164B /* LaunchScreen.storyboard */,
 				94641DD71CD0624800C1164B /* Info.plist */,
 			);
 			path = "Musical Terms";
@@ -247,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94641DD61CD0624800C1164B /* LaunchScreen.storyboard in Resources */,
 				94641DD31CD0624800C1164B /* Assets.xcassets in Resources */,
 				94641DD11CD0624800C1164B /* Main.storyboard in Resources */,
 			);
@@ -322,14 +318,6 @@
 				94641DD01CD0624800C1164B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		94641DD41CD0624800C1164B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94641DD51CD0624800C1164B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
