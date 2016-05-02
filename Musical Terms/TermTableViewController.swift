@@ -10,6 +10,7 @@ import UIKit
 
 class TermTableViewController: UITableViewController {
     
+    //Declaration of variables and searchController
     var table = [Term]()
     var filteredTable = [Term]()
     var data: Term!
@@ -50,6 +51,7 @@ class TermTableViewController: UITableViewController {
         return 1
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Returns the size of the filtered table is a search is in progress, else returns size of full table 
         if searchController.active && searchController.searchBar.text != "" {
             return filteredTable.count
         }
@@ -79,6 +81,7 @@ class TermTableViewController: UITableViewController {
         //Debug statement
         print("pressed")
         
+        //Gets either the full table or the filtered one if a search is in progress, store it in a termp variable, which will be accessed in the segue
         if (searchController.active && searchController.searchBar.text != "") {
             self.data = filteredTable[indexPath.row]
         }
@@ -94,6 +97,7 @@ class TermTableViewController: UITableViewController {
             //Debug statement
             print("segue occuring")
             
+            //Create detailsVC as the destination of the segue, and copy the data over so that it can be accessed
             let detailsVC = segue.destinationViewController as! DetailsViewController
             detailsVC.details = self.data
         }

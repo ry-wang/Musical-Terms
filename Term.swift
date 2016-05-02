@@ -22,9 +22,4 @@ class Term {
         self.word = text
         self.category = category
     }
-    
-    //Function for setting definition
-    func setDefinition(input: String) {
-        definition = input
-    }
 }

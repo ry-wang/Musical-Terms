@@ -10,6 +10,7 @@ import UIKit
 
 class TermTableViewCell: UITableViewCell {
     
+    //Outlet for the text label displayed in table cell
     @IBOutlet weak var musicTerm: UILabel!
 
 }

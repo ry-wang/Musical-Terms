@@ -13,6 +13,7 @@ import UIKit
 class MainNavigationController: UINavigationController {
     
     override func viewDidLoad() {
+        //Setting the nav bar to have black background, and white text
         self.navigationBar.barTintColor = UIColor.blackColor()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }

@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //Debug statement
         print("launched")
+        //Changing the status bar to be white text
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }

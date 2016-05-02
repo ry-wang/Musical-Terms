@@ -111,6 +111,9 @@ extension TermTableViewController {
         table+=[t22, t23, t24, t25, t26, t27, t28, t29, t30, t31,t32, t33]
         
         
+        //STYLE
+        
+        
         print("table loaded")
 
     }
