@@ -112,8 +112,27 @@ extension TermTableViewController {
         
         
         //STYLE
+        let t34 = Term(text: "Ad Libitum", category: "Style")
+        let t35 = Term(text: "Agitato", category: "Style")
+        let t36 = Term(text: "Animato", category: "Style")
+        let t37 = Term(text: "Brillante", category: "Style")
         
+        let t38 = Term(text: "Calando", category: "Style")
+        let t39 = Term(text: "Cantabile", category: "Style")
+        let t40 = Term(text: "Con Brio", category: "Style")
+        let t41 = Term(text: "Con Fuoco", category: "Style")
+
+        t34.definition = "at the performer's liberty"
+        t35.definition = "agitated, excited"
+        t36.definition = "animated, spirited"
+        t37.definition = "brilliant"
         
+        t38.definition = "becoming slower and softer"
+        t39.definition = "in a singing style"
+        t40.definition = "with vigor or vivacity"
+        t41.definition = "with fire"
+        
+        table+=[t34, t35, t36, t37, t38, t39, t40, t41]
         print("table loaded")
 
     }
