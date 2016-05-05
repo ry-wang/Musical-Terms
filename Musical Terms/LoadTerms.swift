@@ -131,6 +131,11 @@ extension TermTableViewController {
         let t47 = Term(text: "Grandioso", category: "Style")
         let t48 = Term(text: "Grazioso", category: "Style")
         let t49 = Term(text: "Giocoso", category: "Style")
+        
+        let t50 = Term(text: "Largamente", category: "Style")
+        let t51 = Term(text: "Legato", category: "Style")
+        let t52 = Term(text: "Leggiero", category: "Style")
+        let t53 = Term(text: "Maestoso", category: "Style")
 
         t34.definition = "at the performer's liberty"
         t35.definition = "agitated, excited"
@@ -152,9 +157,15 @@ extension TermTableViewController {
         t48.definition = "graceful"
         t49.definition = "joyfully"
         
+        t50.definition = "broadly"
+        t51.definition = "smooth"
+        t52.definition = "light"
+        t53.definition = "majestic"
+        
         table+=[t34, t35, t36, t37, t38, t39, t40, t41]
         table+=[t42, t43, t44, t45]
         table+=[t46, t47, t48, t49]
+        table+=[t50, t51, t52, t53]
         
         print("table loaded")
 
