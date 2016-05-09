@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A7B1DB1CE012AC005B832F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7B1DA1CE012AC005B832F /* SettingsViewController.swift */; };
 		9443CD771CD2F3C5008C2B12 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9443CD761CD2F3C5008C2B12 /* MainNavigationController.swift */; };
 		9443CD791CD30B85008C2B12 /* LoadTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9443CD781CD30B85008C2B12 /* LoadTerms.swift */; };
 		94641DCC1CD0624700C1164B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94641DCB1CD0624700C1164B /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35A7B1DA1CE012AC005B832F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9443CD761CD2F3C5008C2B12 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9443CD781CD30B85008C2B12 /* LoadTerms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTerms.swift; sourceTree = "<group>"; };
 		94641DC81CD0624700C1164B /* Musical Terms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Terms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				94CBC75D1CD1A98E007572D4 /* TermTableViewCell.swift */,
 				94CBC75F1CD1BBBF007572D4 /* DetailsViewController.swift */,
 				94641DCF1CD0624800C1164B /* Main.storyboard */,
+				35A7B1DA1CE012AC005B832F /* SettingsViewController.swift */,
 				94641DD21CD0624800C1164B /* Assets.xcassets */,
 				94641DD71CD0624800C1164B /* Info.plist */,
 			);
@@ -277,6 +280,7 @@
 				9443CD791CD30B85008C2B12 /* LoadTerms.swift in Sources */,
 				946C50141CD0697700622506 /* Term.swift in Sources */,
 				94CBC7601CD1BBBF007572D4 /* DetailsViewController.swift in Sources */,
+				35A7B1DB1CE012AC005B832F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

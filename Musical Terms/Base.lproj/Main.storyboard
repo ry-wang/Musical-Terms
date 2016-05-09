@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BrR-pz-EmQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BrR-pz-EmQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x14-VQ-LeN" id="dII-SS-bSe">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-wJ-DFY" userLabel="musicTerm">
@@ -48,7 +48,14 @@
                             <outlet property="delegate" destination="NA8-eO-zx5" id="nlt-GX-buG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Musical Terms" id="8D0-vm-Ddk"/>
+                    <navigationItem key="navigationItem" title="Musical Terms" id="8D0-vm-Ddk">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="AoG-ro-rIW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="hvz-FA-rvX" kind="show" id="dx3-XW-lWO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="1ps-OF-6ZZ" id="B48-f9-yRL"/>
                         <segue destination="ViJ-UB-ll4" kind="show" identifier="openDetails" id="nio-3G-SyH"/>
@@ -65,6 +72,62 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="713" y="420"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="roP-wm-0vU">
+            <objects>
+                <viewController id="hvz-FA-rvX" userLabel="SettingsViewController" customClass="SettingsViewController" customModule="Musical_Terms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flz-rH-NRg"/>
+                        <viewControllerLayoutGuide type="bottom" id="4gz-qL-GHF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xXH-pt-bbb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories Displayed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blT-To-28y">
+                                <rect key="frame" x="182" y="84" width="237" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.38508262434554963" green="0.38508262434554963" blue="0.38508262434554963" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnl-0X-JOO">
+                                <rect key="frame" x="43" y="154" width="97.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-JS-LgD" userLabel="switchDynamics">
+                                <rect key="frame" x="295" y="154" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0U-az-c2s">
+                                <rect key="frame" x="43" y="205.5" width="67" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09k-wr-1TN" userLabel="switchTempo">
+                                <rect key="frame" x="295" y="205" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="09k-wr-1TN" firstAttribute="leading" secondItem="l0U-az-c2s" secondAttribute="trailing" constant="185" id="4Hn-it-wiB"/>
+                            <constraint firstItem="blT-To-28y" firstAttribute="centerX" secondItem="xXH-pt-bbb" secondAttribute="centerX" id="7kw-oh-WwZ"/>
+                            <constraint firstItem="blT-To-28y" firstAttribute="top" secondItem="flz-rH-NRg" secondAttribute="bottom" constant="20" id="9lH-T7-EiR"/>
+                            <constraint firstItem="Xnl-0X-JOO" firstAttribute="leading" secondItem="xXH-pt-bbb" secondAttribute="leadingMargin" constant="23" id="ApS-gU-CSr"/>
+                            <constraint firstItem="09k-wr-1TN" firstAttribute="top" secondItem="ITc-JS-LgD" secondAttribute="bottom" constant="20" id="BDS-lc-m40"/>
+                            <constraint firstItem="ITc-JS-LgD" firstAttribute="top" secondItem="flz-rH-NRg" secondAttribute="bottom" constant="90" id="K7x-dr-qjE"/>
+                            <constraint firstItem="ITc-JS-LgD" firstAttribute="leading" secondItem="Xnl-0X-JOO" secondAttribute="trailing" constant="155" id="TU9-m9-dTH"/>
+                            <constraint firstItem="Xnl-0X-JOO" firstAttribute="top" secondItem="blT-To-28y" secondAttribute="bottom" constant="40" id="Tvs-JA-nL6"/>
+                            <constraint firstItem="l0U-az-c2s" firstAttribute="leading" secondItem="xXH-pt-bbb" secondAttribute="leadingMargin" constant="23" id="bbJ-MC-FOn"/>
+                            <constraint firstItem="l0U-az-c2s" firstAttribute="top" secondItem="Xnl-0X-JOO" secondAttribute="bottom" constant="25" id="o2y-fR-dCJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQM-ES-xNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="1139"/>
         </scene>
         <!--DetailsViewController-->
         <scene sceneID="5Kg-J5-7ep">

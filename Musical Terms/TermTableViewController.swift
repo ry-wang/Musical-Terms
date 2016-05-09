@@ -28,6 +28,7 @@ class TermTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
+        self.view.backgroundColor = UIColor.darkGrayColor()
 
         //Load data into table
         loadTable()
