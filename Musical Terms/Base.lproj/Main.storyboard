@@ -88,40 +88,134 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories Displayed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blT-To-28y">
                                 <rect key="frame" x="182" y="84" width="237" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.38508262434554963" green="0.38508262434554963" blue="0.38508262434554963" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnl-0X-JOO">
-                                <rect key="frame" x="43" y="154" width="97.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-JS-LgD" userLabel="switchDynamics">
-                                <rect key="frame" x="295" y="154" width="51" height="31"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0U-az-c2s">
-                                <rect key="frame" x="43" y="205.5" width="67" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09k-wr-1TN" userLabel="switchTempo">
-                                <rect key="frame" x="295" y="205" width="51" height="31"/>
-                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0HQ-Ye-1XR">
+                                <rect key="frame" x="34" y="144" width="533" height="332"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-al-cta">
+                                        <rect key="frame" x="0.0" y="0.0" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dynamics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnl-0X-JOO">
+                                                <rect key="frame" x="0.0" y="5" width="80" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-JS-LgD" userLabel="switchDynamics">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YjF-jH-3sx">
+                                        <rect key="frame" x="0.0" y="43" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0U-az-c2s">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09k-wr-1TN" userLabel="switchTempo">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-6D-W43">
+                                        <rect key="frame" x="0.0" y="86" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Terms Related to Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcF-Dh-zfd">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-rI-4vT" userLabel="switchTempoRelated">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YeC-ba-WGX">
+                                        <rect key="frame" x="0.0" y="129" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KR-AF-n1x">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jb5-4x-UPl" userLabel="switchStyle">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwA-te-beI">
+                                        <rect key="frame" x="0.0" y="172" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Italian Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU9-xn-ZNv">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDm-ti-sxc" userLabel="switchItalian">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-qS-BqL">
+                                        <rect key="frame" x="0.0" y="215" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conjunction Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="853-PY-P5T">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-aq-z4Y" userLabel="switchConjunction">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-q5-98y">
+                                        <rect key="frame" x="0.0" y="258" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N10-NS-HSd">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3k-EA-EJF" userLabel="switchFrench">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-vP-kc4">
+                                        <rect key="frame" x="0.0" y="301" width="533" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="German Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE4-vB-B8Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-i0-uSa" userLabel="switchGerman">
+                                                <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="09k-wr-1TN" firstAttribute="leading" secondItem="l0U-az-c2s" secondAttribute="trailing" constant="185" id="4Hn-it-wiB"/>
-                            <constraint firstItem="blT-To-28y" firstAttribute="centerX" secondItem="xXH-pt-bbb" secondAttribute="centerX" id="7kw-oh-WwZ"/>
-                            <constraint firstItem="blT-To-28y" firstAttribute="top" secondItem="flz-rH-NRg" secondAttribute="bottom" constant="20" id="9lH-T7-EiR"/>
-                            <constraint firstItem="Xnl-0X-JOO" firstAttribute="leading" secondItem="xXH-pt-bbb" secondAttribute="leadingMargin" constant="23" id="ApS-gU-CSr"/>
-                            <constraint firstItem="09k-wr-1TN" firstAttribute="top" secondItem="ITc-JS-LgD" secondAttribute="bottom" constant="20" id="BDS-lc-m40"/>
-                            <constraint firstItem="ITc-JS-LgD" firstAttribute="top" secondItem="flz-rH-NRg" secondAttribute="bottom" constant="90" id="K7x-dr-qjE"/>
-                            <constraint firstItem="ITc-JS-LgD" firstAttribute="leading" secondItem="Xnl-0X-JOO" secondAttribute="trailing" constant="155" id="TU9-m9-dTH"/>
-                            <constraint firstItem="Xnl-0X-JOO" firstAttribute="top" secondItem="blT-To-28y" secondAttribute="bottom" constant="40" id="Tvs-JA-nL6"/>
-                            <constraint firstItem="l0U-az-c2s" firstAttribute="leading" secondItem="xXH-pt-bbb" secondAttribute="leadingMargin" constant="23" id="bbJ-MC-FOn"/>
-                            <constraint firstItem="l0U-az-c2s" firstAttribute="top" secondItem="Xnl-0X-JOO" secondAttribute="bottom" constant="25" id="o2y-fR-dCJ"/>
+                            <constraint firstItem="2zV-al-cta" firstAttribute="top" secondItem="blT-To-28y" secondAttribute="bottom" constant="30" id="QQI-Ss-8PR"/>
+                            <constraint firstItem="0HQ-Ye-1XR" firstAttribute="leading" secondItem="xXH-pt-bbb" secondAttribute="leadingMargin" constant="14" id="R5i-H1-qNb"/>
+                            <constraint firstItem="blT-To-28y" firstAttribute="centerX" secondItem="0HQ-Ye-1XR" secondAttribute="centerX" id="Xhf-Ye-Vte"/>
+                            <constraint firstItem="blT-To-28y" firstAttribute="top" secondItem="flz-rH-NRg" secondAttribute="bottom" constant="20" id="mZN-yE-a8P"/>
+                            <constraint firstItem="blT-To-28y" firstAttribute="centerX" secondItem="xXH-pt-bbb" secondAttribute="centerX" id="tzc-y8-3Ub"/>
                         </constraints>
                     </view>
                 </viewController>
