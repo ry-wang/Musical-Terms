@@ -211,6 +211,29 @@ extension TermTableViewController {
         table+=[t62, t63, t64, t65]
         table+=[t66, t67, t68, t69]
         
+        //OTHER ITALIAN TERMS
+        let t70 = Term(text: "Arco", category: "Italian")
+        let t71 = Term(text: "Attacca", category: "Italian")
+        let t72 = Term(text: "Con Pedale", category: "Italian")
+        let t73 = Term(text: "Con Sordino", category: "Italian")
+        
+        let t74 = Term(text: "Da Capo, D.C.", category: "Italian")
+        let t75 = Term(text: "Da Capo Al Fine", category: "Italian")
+        let t76 = Term(text: "Dal Segno, D.S.", category: "Italian")
+        let t77 = Term(text: "Fine", category: "Italian")
+        
+        t70.definition = "for stringed instruments: play with the bow"
+        t71.definition = "do not pause between sections or movements"
+        t72.definition = "with pedal"
+        t73.definition = "played with a mute"
+        
+        t74.definition = "from the beginning"
+        t75.definition = "repeat from the beginning and end at Fine"
+        t76.definition = "from the sign %"
+        t77.definition = "end, close"
+        
+        table+=[t70, t71, t72, t73, t74, t75, t76, t77]
+        
         print("table loaded")
 
     }

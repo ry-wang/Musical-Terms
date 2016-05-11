@@ -11,10 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     var categoriesSelected = [String]()
+    
+    @IBOutlet weak var switchAll = UISwitch()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = UIColor.darkGrayColor()
@@ -30,6 +32,7 @@ class SettingsViewController: UIViewController {
     
     
     //Plan: add categories that we want to show to an array, then do array.contains() in main screen to filter them out
+    //When All Terms switch is changed, disable all other switches
 
     /*
     // MARK: - Navigation
