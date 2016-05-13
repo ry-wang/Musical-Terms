@@ -227,6 +227,11 @@ extension TermTableViewController {
         let t80 = Term(text: "Mano Sinstra", category: "Italian")
         let t81 = Term(text: "Ottava, 8ve", category: "Italian")
         
+        let t82 = Term(text: "Pizzicato", category: "Italian")
+        let t83 = Term(text: "Primo", category: "Italian")
+        let t84 = Term(text: "Tre Corde", category: "Italian")
+        let t85 = Term(text: "Una Corda", category: "Italian")
+        
         t70.definition = "for stringed instruments: play with the bow"
         t71.definition = "do not pause between sections or movements"
         t72.definition = "with pedal"
@@ -242,8 +247,13 @@ extension TermTableViewController {
         t80.definition = "left hand"
         t81.definition = "play an octave higher"
         
+        t82.definition = "for stringed instruments: pluck with fingers"
+        t83.definition = "first; the upper part of a duet"
+        t84.definition = "three strings; indication in piano music to stop using the soft pedal"
+        t85.definition = "one string; indication in piano music to use the left pedal"
+        
         table+=[t70, t71, t72, t73, t74, t75, t76, t77]
-        table+=[t78, t79, t80, t81]
+        table+=[t78, t79, t80, t81, t82, t83, t84, t85]
         
         print("table loaded")
 
