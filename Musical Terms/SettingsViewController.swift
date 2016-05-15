@@ -26,6 +26,7 @@ class SettingsViewController: UIViewController {
     @IBAction func allToggled(sender: AnyObject) {
         //Debug statement
         print("all terms switch toggled")
+        //If the allTerms switch is on, then every category gets turned on, and off otherwise
         if switchAll.on {
             modifySwitchStates(true)
         }
