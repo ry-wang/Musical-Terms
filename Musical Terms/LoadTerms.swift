@@ -229,8 +229,16 @@ extension TermTableViewController {
         
         let t82 = Term(text: "Pizzicato", category: "Italian")
         let t83 = Term(text: "Primo", category: "Italian")
-        let t84 = Term(text: "Tre Corde", category: "Italian")
-        let t85 = Term(text: "Una Corda", category: "Italian")
+        let t84 = Term(text: "Secondo", category: "Italian")
+        let t85 = Term(text: "Sopra", category: "Italian")
+        
+        let t86 = Term(text: "Tacet", category: "Italian")
+        let t87 = Term(text: "Tutti", category: "Italian")
+        let t88 = Term(text: "Tre Corde", category: "Italian")
+        let t89 = Term(text: "Una Corda", category: "Italian")
+        
+        let t90 = Term(text: "Volti Subito", category: "Italian")
+
         
         t70.definition = "for stringed instruments: play with the bow"
         t71.definition = "do not pause between sections or movements"
@@ -249,11 +257,22 @@ extension TermTableViewController {
         
         t82.definition = "for stringed instruments: pluck with fingers"
         t83.definition = "first; the upper part of a duet"
-        t84.definition = "three strings; indication in piano music to stop using the soft pedal"
-        t85.definition = "one string; indication in piano music to use the left pedal"
+        t84.definition = "second; the lower part of a duet"
+        t85.definition = "above"
+        
+        t86.definition = "silence (for orchestral parts)"
+        t87.definition = "for the whole ensemble"
+        t88.definition = "three strings; indication in piano music to stop using the soft pedal"
+        t89.definition = "one string; indication in piano music to use the left pedal"
+        
+        t90.definition = "turn the page quickly"
+        
         
         table+=[t70, t71, t72, t73, t74, t75, t76, t77]
         table+=[t78, t79, t80, t81, t82, t83, t84, t85]
+        table+=[t86, t87, t88, t89, t90]
+        
+        //CONJUNCTION WORDS
         
         print("table loaded")
 

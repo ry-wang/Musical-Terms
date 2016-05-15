@@ -12,7 +12,16 @@ class SettingsViewController: UIViewController {
     
     var categoriesSelected = [String]()
     
-    @IBOutlet weak var switchAll = UISwitch()
+    //Linking all the switches in the UI
+    @IBOutlet weak var switchAll: UISwitch!
+    @IBOutlet weak var switchDynamics: UISwitch!
+    @IBOutlet weak var switchTempo: UISwitch!
+    @IBOutlet weak var swtichTempoRelated: UISwitch!
+    @IBOutlet weak var switchStyle: UISwitch!
+    @IBOutlet weak var switchItalian: UISwitch!
+    @IBOutlet weak var switchConjunction: UISwitch!
+    @IBOutlet weak var switchFrench: UISwitch!
+    @IBOutlet weak var switchGerman: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
