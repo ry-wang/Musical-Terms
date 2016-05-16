@@ -16,13 +16,25 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var switchAll: UISwitch!
     @IBOutlet weak var switchDynamics: UISwitch!
     @IBOutlet weak var switchTempo: UISwitch!
-    @IBOutlet weak var swtichTempoRelated: UISwitch!
+    @IBOutlet weak var switchTempoRelated: UISwitch!
     @IBOutlet weak var switchStyle: UISwitch!
     @IBOutlet weak var switchItalian: UISwitch!
     @IBOutlet weak var switchConjunction: UISwitch!
     @IBOutlet weak var switchFrench: UISwitch!
     @IBOutlet weak var switchGerman: UISwitch!
 
+    @IBAction func allToggled(sender: AnyObject) {
+        //Debug statement
+        print("all terms switch toggled")
+        //If the allTerms switch is on, then every category gets turned on, and off otherwise
+        if switchAll.on {
+            modifySwitchStates(true)
+        }
+        else {
+            modifySwitchStates(false)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +48,18 @@ class SettingsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Changing all the switches based on the input (either true or false)
+    func modifySwitchStates(input: Bool) {
+        switchDynamics.on = input
+        switchTempo.on = input
+        switchTempoRelated.on = input
+        switchStyle.on = input
+        switchItalian.on = input
+        switchConjunction.on = input
+        switchFrench.on = input
+        switchGerman.on = input
     }
     
     

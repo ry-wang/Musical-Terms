@@ -105,6 +105,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-JS-LgD" userLabel="switchAll">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="allToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="ww3-08-Tlz"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -241,7 +244,7 @@
                         <outlet property="switchItalian" destination="VDm-ti-sxc" id="t7o-99-w1x"/>
                         <outlet property="switchStyle" destination="Jb5-4x-UPl" id="U4N-G1-k7m"/>
                         <outlet property="switchTempo" destination="09k-wr-1TN" id="Cm0-A0-n12"/>
-                        <outlet property="swtichTempoRelated" destination="qEL-rI-4vT" id="iE5-an-BG3"/>
+                        <outlet property="switchTempoRelated" destination="qEL-rI-4vT" id="2Uh-YG-ZYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQM-ES-xNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
