@@ -123,6 +123,11 @@ class SettingsViewController: UIViewController {
         return type
     }
     
+    //Implement function
+    func switchAllState(input: String) {
+        
+    }
+    
     
     
     //Plan: add categories that we want to show to an array, then do array.contains() in main screen to filter them out
