@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var categoriesSelected = [String]()
+    var typesSelected = [String]()
     
     //Linking all the switches in the UI
     @IBOutlet weak var switchAll: UISwitch!
@@ -23,25 +23,68 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var switchFrench: UISwitch!
     @IBOutlet weak var switchGerman: UISwitch!
 
+    //Function for toggling of allTerms switch
     @IBAction func allToggled(sender: AnyObject) {
         //Debug statement
         print("all terms switch toggled")
         //If the allTerms switch is on, then every category gets turned on, and off otherwise
         if switchAll.on {
             modifySwitchStates(true)
+            //Add only the categories that haven't been added in yet
+            for index in 0..<8 {
+                if !typesSelected.contains(returnType(index)) {
+                    typesSelected.append(returnType(index))
+                }
+            }
         }
         else {
             modifySwitchStates(false)
+            //Empty array
+            typesSelected.removeAll()
         }
+    }
+    
+    @IBAction func dynamicsToggled(sender: AnyObject) {
+        //Debug statement
+        print("dynamics toggled")
+        
+        if switchDynamics.on {
+            if !typesSelected.contains("dynamics") {
+                typesSelected.append("dynamics")
+            }
+        }
+        else {
+            if switchAll.on {
+                switchAll.on = false
+            }
+            typesSelected.removeAtIndex(typesSelected.indexOf("dynamics")!)
+        }
+    }
+    
+    @IBAction func tempoToggled(sender: AnyObject) {
+        //Debug statement
+        print("tempo toggled")
+        
+        if switchTempo.on {
+            if !typesSelected.contains("tempo") {
+                typesSelected.append("tempo")
+            }
+        }
+        else {
+            if switchAll.on {
+                switchAll.on = false
+            }
+            typesSelected.removeAtIndex(typesSelected.indexOf("tempo")!)
+        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         self.view.backgroundColor = UIColor.darkGrayColor()
-        //self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
+       
     }
     
 
@@ -60,6 +103,24 @@ class SettingsViewController: UIViewController {
         switchConjunction.on = input
         switchFrench.on = input
         switchGerman.on = input
+    }
+    
+    func returnType(input: Int) -> String {
+        var type = String()
+        
+        switch (input) {
+        case 0: type = "dynamics"
+        case 1: type = "tempo"
+        case 2: type = "tempoRelated"
+        case 3: type = "style"
+        case 4: type = "italian"
+        case 5: type = "conjunction"
+        case 6: type = "french"
+        case 7: type = "german"
+        default: type = "not found"
+        }
+        
+        return type
     }
     
     

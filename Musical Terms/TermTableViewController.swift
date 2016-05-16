@@ -15,6 +15,8 @@ class TermTableViewController: UITableViewController {
     var filteredTable = [Term]()
     var data: Term!
     
+    var typesSelected = [String]()
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     
@@ -29,6 +31,9 @@ class TermTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
         self.view.backgroundColor = UIColor.darkGrayColor()
+        
+        //Load types array
+        loadTypes()
 
         //Load data into table
         loadTable()
@@ -41,12 +46,10 @@ class TermTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -63,17 +66,16 @@ class TermTableViewController: UITableViewController {
         let cellIdentifier = "TermTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TermTableViewCell
         
-        let a: Term!
-        
-        //Gets either the full table or the filtered one if a search is in progress, store it in a termp variable
+        //Gets either the regular table or the filtered one if a search is in progress, and set the cell to it
+        //Also takes account of the categories
         if (searchController.active && searchController.searchBar.text != "") {
-            a = filteredTable[indexPath.row]
+            cell.musicTerm.text = filteredTable[indexPath.row].word
         }
-        else {
-            a = table[indexPath.row]
+        else if (typesSelected.contains(table[indexPath.row].type)){
+            //Set the text of the cell to match the text in the table, only if the category is found in the typesSelected array
+            cell.musicTerm.text = table[indexPath.row].word
         }
-        //Set the text of the cell to match the text in the temp variable
-        cell.musicTerm.text = a.word
+        
         return cell
     }
     
@@ -102,6 +104,23 @@ class TermTableViewController: UITableViewController {
             let detailsVC = segue.destinationViewController as! DetailsViewController
             detailsVC.details = self.data
         }
+    }
+    
+    func loadTypes() {
+        typesSelected.append("dynamics")
+        typesSelected.append("tempo")
+        typesSelected.append("tempoRelated")
+        typesSelected.append("style")
+        typesSelected.append("italian")
+        typesSelected.append("conjunction")
+        typesSelected.append("french")
+        typesSelected.append("german")
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
