@@ -52,11 +52,10 @@ class SettingsViewController: UIViewController {
             if !typesSelected.contains("dynamics") {
                 typesSelected.append("dynamics")
             }
+            switchAllState("toggleOn")
         }
         else {
-            if switchAll.on {
-                switchAll.on = false
-            }
+            switchAllState("toggleOff")
             typesSelected.removeAtIndex(typesSelected.indexOf("dynamics")!)
         }
     }
@@ -69,11 +68,10 @@ class SettingsViewController: UIViewController {
             if !typesSelected.contains("tempo") {
                 typesSelected.append("tempo")
             }
+            switchAllState("toggleOn")
         }
         else {
-            if switchAll.on {
-                switchAll.on = false
-            }
+            switchAllState("toggleOff")
             typesSelected.removeAtIndex(typesSelected.indexOf("tempo")!)
         }
 
@@ -125,7 +123,13 @@ class SettingsViewController: UIViewController {
     
     //Implement function
     func switchAllState(input: String) {
-        
+        if switchAll.on && input == "toggleOff" {
+            switchAll.on = false
+        }
+        //All categories selected, turn allTerms switch on
+        else if typesSelected.count == 8 && input == "toggleOn" {
+            switchAll.on = true
+        }
     }
     
     
