@@ -122,6 +122,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywL-Ux-a1q" userLabel="switchDynamics">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="dynamicsToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="0ks-1b-Sd5"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -136,6 +139,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09k-wr-1TN" userLabel="switchTempo">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="tempoToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="Srp-OX-MiR"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>

@@ -16,6 +16,8 @@ class Term {
     var category = ""
     //Definiton of term
     var definition = ""
+    //Type of the term, used for filtering purposes
+    var type = ""
     
     //Constructor
     init(text: String, category: String) {

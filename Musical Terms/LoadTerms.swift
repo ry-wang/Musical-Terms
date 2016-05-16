@@ -212,32 +212,32 @@ extension TermTableViewController {
         table+=[t66, t67, t68, t69]
         
         //OTHER ITALIAN TERMS
-        let t70 = Term(text: "Arco", category: "Italian")
-        let t71 = Term(text: "Attacca", category: "Italian")
-        let t72 = Term(text: "Con Pedale", category: "Italian")
-        let t73 = Term(text: "Con Sordino", category: "Italian")
+        let t70 = Term(text: "Arco", category: "Other Italian Terms")
+        let t71 = Term(text: "Attacca", category: "Other Italian Terms")
+        let t72 = Term(text: "Con Pedale", category: "Other Italian Terms")
+        let t73 = Term(text: "Con Sordino", category: "Other Italian Terms")
         
-        let t74 = Term(text: "Da Capo, D.C.", category: "Italian")
-        let t75 = Term(text: "Da Capo Al Fine", category: "Italian")
-        let t76 = Term(text: "Dal Segno, D.S.", category: "Italian")
-        let t77 = Term(text: "Fine", category: "Italian")
+        let t74 = Term(text: "Da Capo, D.C.", category: "Other Italian Terms")
+        let t75 = Term(text: "Da Capo Al Fine", category: "Other Italian Terms")
+        let t76 = Term(text: "Dal Segno, D.S.", category: "Other Italian Terms")
+        let t77 = Term(text: "Fine", category: "Other Italian Terms")
         
-        let t78 = Term(text: "Loco", category: "Italian")
-        let t79 = Term(text: "Mano Destra", category: "Italian")
-        let t80 = Term(text: "Mano Sinstra", category: "Italian")
-        let t81 = Term(text: "Ottava, 8ve", category: "Italian")
+        let t78 = Term(text: "Loco", category: "Other Italian Terms")
+        let t79 = Term(text: "Mano Destra", category: "Other Italian Terms")
+        let t80 = Term(text: "Mano Sinstra", category: "Other Italian Terms")
+        let t81 = Term(text: "Ottava, 8ve", category: "Other Italian Terms")
         
-        let t82 = Term(text: "Pizzicato", category: "Italian")
-        let t83 = Term(text: "Primo", category: "Italian")
-        let t84 = Term(text: "Secondo", category: "Italian")
-        let t85 = Term(text: "Sopra", category: "Italian")
+        let t82 = Term(text: "Pizzicato", category: "Other Italian Terms")
+        let t83 = Term(text: "Primo", category: "Other Italian Terms")
+        let t84 = Term(text: "Secondo", category: "Other Italian Terms")
+        let t85 = Term(text: "Sopra", category: "Other Italian Terms")
         
-        let t86 = Term(text: "Tacet", category: "Italian")
-        let t87 = Term(text: "Tutti", category: "Italian")
-        let t88 = Term(text: "Tre Corde", category: "Italian")
-        let t89 = Term(text: "Una Corda", category: "Italian")
+        let t86 = Term(text: "Tacet", category: "Other Italian Terms")
+        let t87 = Term(text: "Tutti", category: "Other Italian Terms")
+        let t88 = Term(text: "Tre Corde", category: "Other Italian Terms")
+        let t89 = Term(text: "Una Corda", category: "Other Italian Terms")
         
-        let t90 = Term(text: "Volti Subito", category: "Italian")
+        let t90 = Term(text: "Volti Subito", category: "Other Italian Terms")
 
         
         t70.definition = "for stringed instruments: play with the bow"
@@ -273,6 +273,31 @@ extension TermTableViewController {
         table+=[t86, t87, t88, t89, t90]
         
         //CONJUNCTION WORDS
+        
+        
+        //ASSIGNING TYPE TO EACH WORD
+        
+        //Assigning type to tempoRelated terms
+        for i in 22...33 {
+            table[i].type = "tempoRelated"
+        }
+        //Assigning type to other terms
+        for i in 0...21 {
+            if table[i].category == "Dynamics" {
+                table[i].type = "dynamics"
+            }
+            else {
+                table[i].type = "tempo"
+            }
+        }
+        for i in 34..<table.count {
+            switch table[i].category {
+            case "Style": table[i].type = "style"
+            case "Other Italian Terms": table[i].type = "italian"
+                //Unfinished cases, add when rest of terms have been added
+            default: table[i].type = ""
+            }
+        }
         
         print("table loaded")
 
