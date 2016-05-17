@@ -27,7 +27,7 @@ class SettingsViewController: UIViewController {
     //Add a check in each switchToggle to determine whether switchAll should toggle or not
     
     //Variable to keep track of how many switches are on, which is all on start
-    //let totalNumSwitches: Int = 8
+    //var totalNumSwitches = 8
     var numSwitchesOn = 8
 
     //Function for toggling of allTerms switch
@@ -111,6 +111,22 @@ class SettingsViewController: UIViewController {
         checkNumberOfSwitchesOn(switchStyle)
     }
     
+    @IBAction func italianToggled(sender: AnyObject) {
+        checkNumberOfSwitchesOn(switchItalian)
+    }
+    
+    @IBAction func conjunctionToggled(sender: AnyObject) {
+        checkNumberOfSwitchesOn(switchConjunction)
+    }
+    
+    @IBAction func frenchToggled(sender: AnyObject) {
+        checkNumberOfSwitchesOn(switchFrench)
+    }
+    
+    @IBAction func germanToggled(sender: AnyObject) {
+        checkNumberOfSwitchesOn(switchGerman)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -184,6 +200,7 @@ class SettingsViewController: UIViewController {
         else {
             numSwitchesOn -= 1
         }
+        
         //Debug statement
         print(numSwitchesOn)
         
@@ -194,8 +211,6 @@ class SettingsViewController: UIViewController {
             switchAll.on = false
         }
     }
-    
-    
     
     //Plan: add categories that we want to show to an array, then do array.contains() in main screen to filter them out
     //When All Terms switch is changed, disable all other switches
@@ -209,5 +224,7 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

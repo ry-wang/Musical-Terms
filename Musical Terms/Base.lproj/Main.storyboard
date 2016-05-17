@@ -190,6 +190,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDm-ti-sxc" userLabel="switchItalian">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="italianToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="w8U-6s-HJZ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -204,6 +207,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-aq-z4Y" userLabel="switchConjunction">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="conjunctionToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="lpI-Aj-XRf"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -218,6 +224,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3k-EA-EJF" userLabel="switchFrench">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="frenchToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="NNH-WT-9aa"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -232,6 +241,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-i0-uSa" userLabel="switchGerman">
                                                 <rect key="frame" x="484" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="germanToggled:" destination="hvz-FA-rvX" eventType="valueChanged" id="PdT-ra-c4x"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
