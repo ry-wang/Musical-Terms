@@ -16,6 +16,8 @@ class TermTableViewController: UITableViewController {
     var data: Term!
     
     var typesSelected = [String]()
+    //Array to store all the terms to be shown after settings are applied
+    var categoryTable = [Term]()
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -25,6 +27,14 @@ class TermTableViewController: UITableViewController {
             return Term.word.lowercaseString.containsString(searchText.lowercaseString)
         }
         tableView.reloadData()
+    }
+    
+    func filterTableDueToSettings() {
+        for index in 0..<table.count {
+            if typesSelected.contains(table[index].type) {
+                categoryTable.append(table[index])
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -59,7 +69,12 @@ class TermTableViewController: UITableViewController {
         if searchController.active && searchController.searchBar.text != "" {
             return filteredTable.count
         }
-        return table.count
+        else if typesSelected.count != 8 {
+            return categoryTable.count
+        }
+        else {
+            return table.count
+        }
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
@@ -71,8 +86,11 @@ class TermTableViewController: UITableViewController {
         if (searchController.active && searchController.searchBar.text != "") {
             cell.musicTerm.text = filteredTable[indexPath.row].word
         }
-        else if (typesSelected.contains(table[indexPath.row].type)){
+        else if (typesSelected.count != 8) {
             //Set the text of the cell to match the text in the table, only if the category is found in the typesSelected array
+            cell.musicTerm.text = categoryTable[indexPath.row].word
+        }
+        else {
             cell.musicTerm.text = table[indexPath.row].word
         }
         
@@ -120,8 +138,11 @@ class TermTableViewController: UITableViewController {
     @IBAction func unwindToTermTable(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? SettingsViewController {
             self.typesSelected = sourceViewController.typesSelected
+            filterTableDueToSettings()
             tableView.reloadData()
-            //print(self.typesSelected)
+            //Debug statements
+            print(self.typesSelected)
+            print(self.typesSelected.count)
         }
     }
     

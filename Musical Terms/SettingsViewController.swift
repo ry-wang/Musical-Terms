@@ -130,6 +130,7 @@ class SettingsViewController: UIViewController {
             addIntoArray(switchTempoRelated, type: "tempoRelated")
             addIntoArray(switchStyle, type: "style")
             addIntoArray(switchItalian, type: "italian")
+            addIntoArray(switchConjunction, type: "conjunction")
             addIntoArray(switchFrench, type: "french")
             addIntoArray(switchGerman, type: "german")
         }
