@@ -11,6 +11,8 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     var typesSelected = [String]()
+    //Total number of switches
+    let totalNumSwitches = 8
     
     //Linking all the switches in the UI
     @IBOutlet weak var switchAll: UISwitch!
@@ -22,6 +24,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var switchConjunction: UISwitch!
     @IBOutlet weak var switchFrench: UISwitch!
     @IBOutlet weak var switchGerman: UISwitch!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     //Optimize later, have it only modify the array when preparing for the segue back, rather than each time a switch is toggled
     //Add a check in each switchToggle to determine whether switchAll should toggle or not
@@ -37,16 +41,12 @@ class SettingsViewController: UIViewController {
         //If the allTerms switch is on, then every category gets turned on, and off otherwise
         if switchAll.on {
             modifySwitchStates(true)
-            numSwitchesOn = 8
-            //Add only the categories that haven't been added in yet
-            //loadTypes()
+            numSwitchesOn = totalNumSwitches
         }
         else {
             modifySwitchStates(false)
             //Replace hardcoded values with a variable later
             numSwitchesOn = 0
-            //Empty array
-            //typesSelected.removeAll()
         }
     }
     
@@ -55,17 +55,6 @@ class SettingsViewController: UIViewController {
         print("dynamics toggled")
         
         checkNumberOfSwitchesOn(switchDynamics)
-        
-        /*if switchDynamics.on {
-            if !typesSelected.contains("dynamics") {
-                typesSelected.append("dynamics")
-            }
-            switchAllState("toggleOn")
-        }
-        else {
-            switchAllState("toggleOff")
-            typesSelected.removeAtIndex(typesSelected.indexOf("dynamics")!)
-        }*/
     }
     
     @IBAction func tempoToggled(sender: AnyObject) {
@@ -73,17 +62,6 @@ class SettingsViewController: UIViewController {
         print("tempo toggled")
         
         checkNumberOfSwitchesOn(switchTempo)
-        
-        /*if switchTempo.on {
-            if !typesSelected.contains("tempo") {
-                typesSelected.append("tempo")
-            }
-            switchAllState("toggleOn")
-        }
-        else {
-            switchAllState("toggleOff")
-            typesSelected.removeAtIndex(typesSelected.indexOf("tempo")!)
-        }*/
     }
     
     @IBAction func tempoRelatedToggled(sender: AnyObject) {
@@ -127,6 +105,7 @@ class SettingsViewController: UIViewController {
         checkNumberOfSwitchesOn(switchGerman)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -137,6 +116,30 @@ class SettingsViewController: UIViewController {
         //loadTypes()
     }
     
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+        //Debug statement
+        print("Cancel button pressed")
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (saveButton === sender) {
+            addIntoArray(switchDynamics, type: "dynamics")
+            addIntoArray(switchTempo, type: "tempo")
+            addIntoArray(switchTempoRelated, type: "tempoRelated")
+            addIntoArray(switchStyle, type: "style")
+            addIntoArray(switchItalian, type: "italian")
+            addIntoArray(switchFrench, type: "french")
+            addIntoArray(switchGerman, type: "german")
+        }
+    }
+    
+    func addIntoArray(input: UISwitch, type: String) {
+        if input.on && !typesSelected.contains(type) {
+            typesSelected.append(type)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -172,26 +175,6 @@ class SettingsViewController: UIViewController {
         return type
     }
     
-    //Function is useless, remove later
-    /*func switchAllState(input: String) {
-        if switchAll.on && input == "toggleOff" {
-            switchAll.on = false
-        }
-        //All categories selected, turn allTerms switch on
-        else if typesSelected.count == 8 && input == "toggleOn" {
-            switchAll.on = true
-        }
-    }*/
-    
-    //Might be a useless function
-    /* func loadTypes() {
-        for index in 0..<8 {
-            if !typesSelected.contains(returnType(index)) {
-                typesSelected.append(returnType(index))
-            }
-        }
-    }*/
-    
     //Function that incremements or decrements switchesOn, will also toggle switchAll based on value of switchesOn
     func checkNumberOfSwitchesOn(input: UISwitch) {
         if input.on {
@@ -204,6 +187,7 @@ class SettingsViewController: UIViewController {
         //Debug statement
         print(numSwitchesOn)
         
+        //If the number of switches on is 8, that means all switches are on, so switchAll should be on too
         if (numSwitchesOn == 8) {
             switchAll.on = true
         }

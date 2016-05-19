@@ -52,7 +52,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="AoG-ro-rIW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="hvz-FA-rvX" kind="show" id="dx3-XW-lWO"/>
+                                <segue destination="Avb-UG-35f" kind="show" id="dx3-XW-lWO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -259,7 +259,22 @@
                             <constraint firstItem="blT-To-28y" firstAttribute="centerX" secondItem="xXH-pt-bbb" secondAttribute="centerX" id="tzc-y8-3Ub"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Yes-K3-fgX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oLI-q0-yl7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="hvz-FA-rvX" id="Idg-UO-suD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="MAL-dz-avs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="JJL-ra-oGN" kind="unwind" unwindAction="unwindToTermTable:" id="5BD-P4-ARo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="saveButton" destination="MAL-dz-avs" id="gX9-zS-fQ1"/>
                         <outlet property="switchAll" destination="ITc-JS-LgD" id="T96-Vg-XeB"/>
                         <outlet property="switchConjunction" destination="fUk-aq-z4Y" id="iTz-oj-Jxf"/>
                         <outlet property="switchDynamics" destination="ywL-Ux-a1q" id="iPh-ra-36l"/>
@@ -272,8 +287,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQM-ES-xNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JJL-ra-oGN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="713" y="1139"/>
+            <point key="canvasLocation" x="1525" y="1139"/>
         </scene>
         <!--DetailsViewController-->
         <scene sceneID="5Kg-J5-7ep">
@@ -344,6 +360,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sva-8M-BFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-99" y="420"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="TAV-4p-Z5H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Avb-UG-35f" customClass="MainNavigationController" customModule="Musical_Terms" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="95E-dx-aZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hvz-FA-rvX" kind="relationship" relationship="rootViewController" id="nl8-HU-0PM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbS-uE-D9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="1139"/>
         </scene>
     </scenes>
 </document>

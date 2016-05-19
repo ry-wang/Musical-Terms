@@ -117,6 +117,14 @@ class TermTableViewController: UITableViewController {
         typesSelected.append("german")
     }
     
+    @IBAction func unwindToTermTable(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? SettingsViewController {
+            self.typesSelected = sourceViewController.typesSelected
+            tableView.reloadData()
+            //print(self.typesSelected)
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
