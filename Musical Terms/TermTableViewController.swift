@@ -136,6 +136,7 @@ class TermTableViewController: UITableViewController {
             
             if self.typesSelected != sourceViewController.typesSelected {
                 self.typesSelected = sourceViewController.typesSelected
+                table.removeAll()
                 loadTable()
                 filterTableDueToSettings()
                 tableView.reloadData()
