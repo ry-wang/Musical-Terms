@@ -30,10 +30,13 @@ class TermTableViewController: UITableViewController {
     }
     
     func filterTableDueToSettings() {
-        for index in 0..<table.count {
-            if typesSelected.contains(table[index].type) {
-                categoryTable.append(table[index])
+        var index = 0
+        while (index < table.count) {
+            if !typesSelected.contains(table[index].type) {
+                table.removeAtIndex(index)
+                index-=1
             }
+            index+=1
         }
     }
 
@@ -69,9 +72,6 @@ class TermTableViewController: UITableViewController {
         if searchController.active && searchController.searchBar.text != "" {
             return filteredTable.count
         }
-        else if typesSelected.count != 8 {
-            return categoryTable.count
-        }
         else {
             return table.count
         }
@@ -85,10 +85,6 @@ class TermTableViewController: UITableViewController {
         //Also takes account of the categories
         if (searchController.active && searchController.searchBar.text != "") {
             cell.musicTerm.text = filteredTable[indexPath.row].word
-        }
-        else if (typesSelected.count != 8) {
-            //Set the text of the cell to match the text in the table, only if the category is found in the typesSelected array
-            cell.musicTerm.text = categoryTable[indexPath.row].word
         }
         else {
             cell.musicTerm.text = table[indexPath.row].word
@@ -137,9 +133,14 @@ class TermTableViewController: UITableViewController {
     
     @IBAction func unwindToTermTable(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? SettingsViewController {
-            self.typesSelected = sourceViewController.typesSelected
-            filterTableDueToSettings()
-            tableView.reloadData()
+            
+            if self.typesSelected != sourceViewController.typesSelected {
+                self.typesSelected = sourceViewController.typesSelected
+                loadTable()
+                filterTableDueToSettings()
+                tableView.reloadData()
+            }
+            
             //Debug statements
             print(self.typesSelected)
             print(self.typesSelected.count)
