@@ -27,11 +27,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    //Optimize later, have it only modify the array when preparing for the segue back, rather than each time a switch is toggled
-    //Add a check in each switchToggle to determine whether switchAll should toggle or not
-    
-    //Variable to keep track of how many switches are on, which is all on start
-    //var totalNumSwitches = 8
+    //Variable to keep track of how many switches are on, which is all of them on start
     var numSwitchesOn = 8
 
     //Function for toggling of allTerms switch
@@ -45,11 +41,11 @@ class SettingsViewController: UIViewController {
         }
         else {
             modifySwitchStates(false)
-            //Replace hardcoded values with a variable later
             numSwitchesOn = 0
         }
     }
     
+    //Functions for dealing with the toggling of the various switches
     @IBAction func dynamicsToggled(sender: AnyObject) {
         //Debug statement
         print("dynamics toggled")
@@ -69,17 +65,6 @@ class SettingsViewController: UIViewController {
         print("tempoRelated toggled")
         
         checkNumberOfSwitchesOn(switchTempoRelated)
-        
-        /*if switchTempoRelated.on {
-            if !typesSelected.contains("tempoRelated") {
-                typesSelected.append("tempoRelated")
-            }
-            switchAllState("toggleOn")
-        }
-        else {
-            switchAllState("toggleOff")
-            typesSelected.removeAtIndex(typesSelected.indexOf("tempoRelated")!)
-        }*/
     }
     
     @IBAction func styleToggled(sender: AnyObject) {
@@ -122,25 +107,6 @@ class SettingsViewController: UIViewController {
         
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (saveButton === sender) {
-            addIntoArray(switchDynamics, type: "dynamics")
-            addIntoArray(switchTempo, type: "tempo")
-            addIntoArray(switchTempoRelated, type: "tempoRelated")
-            addIntoArray(switchStyle, type: "style")
-            addIntoArray(switchItalian, type: "italian")
-            addIntoArray(switchConjunction, type: "conjunction")
-            addIntoArray(switchFrench, type: "french")
-            addIntoArray(switchGerman, type: "german")
-        }
-    }
-    
-    func addIntoArray(input: UISwitch, type: String) {
-        if input.on && !typesSelected.contains(type) {
-            typesSelected.append(type)
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -159,6 +125,7 @@ class SettingsViewController: UIViewController {
         switchGerman.on = input
     }
     
+    //Function that returns type of term based on the int that's passed in
     func returnType(input: Int) -> String {
         var type = String()
         
@@ -196,9 +163,6 @@ class SettingsViewController: UIViewController {
             switchAll.on = false
         }
     }
-    
-    //Plan: add categories that we want to show to an array, then do array.contains() in main screen to filter them out
-    //When All Terms switch is changed, disable all other switches
 
     /*
     // MARK: - Navigation
@@ -209,6 +173,28 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //Function where pre-segue code is run
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //Calls the function that modifies the typesSelected array when the save button is pressed
+        if (saveButton === sender) {
+            addIntoArray(switchDynamics, type: "dynamics")
+            addIntoArray(switchTempo, type: "tempo")
+            addIntoArray(switchTempoRelated, type: "tempoRelated")
+            addIntoArray(switchStyle, type: "style")
+            addIntoArray(switchItalian, type: "italian")
+            addIntoArray(switchConjunction, type: "conjunction")
+            addIntoArray(switchFrench, type: "french")
+            addIntoArray(switchGerman, type: "german")
+        }
+    }
+    
+    //Function that adds the type into typesSelected only if the switch is on and it's not already contained in the array
+    func addIntoArray(input: UISwitch, type: String) {
+        if input.on && !typesSelected.contains(type) {
+            typesSelected.append(type)
+        }
+    }
     
     
 
