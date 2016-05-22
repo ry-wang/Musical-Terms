@@ -260,12 +260,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Yes-K3-fgX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oLI-q0-yl7">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="cancelButtonPressed:" destination="hvz-FA-rvX" id="Idg-UO-suD"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="MAL-dz-avs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

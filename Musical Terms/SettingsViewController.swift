@@ -100,13 +100,6 @@ class SettingsViewController: UIViewController {
         //Load all categories into typesSelected, probably useless
         //loadTypes()
     }
-    
-    @IBAction func cancelButtonPressed(sender: AnyObject) {
-        //Debug statement
-        print("Cancel button pressed")
-        
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
