@@ -52,7 +52,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="AoG-ro-rIW">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Avb-UG-35f" kind="show" id="dx3-XW-lWO"/>
+                                <segue destination="Avb-UG-35f" kind="show" identifier="openSettings" id="dx3-XW-lWO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

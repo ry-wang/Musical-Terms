@@ -47,30 +47,18 @@ class SettingsViewController: UIViewController {
     
     //Functions for dealing with the toggling of the various switches
     @IBAction func dynamicsToggled(sender: AnyObject) {
-        //Debug statement
-        print("dynamics toggled")
-        
         checkNumberOfSwitchesOn(switchDynamics)
     }
     
     @IBAction func tempoToggled(sender: AnyObject) {
-        //Debug statement
-        print("tempo toggled")
-        
         checkNumberOfSwitchesOn(switchTempo)
     }
     
     @IBAction func tempoRelatedToggled(sender: AnyObject) {
-        //Debug statement
-        print("tempoRelated toggled")
-        
         checkNumberOfSwitchesOn(switchTempoRelated)
     }
     
     @IBAction func styleToggled(sender: AnyObject) {
-        //Debug statement
-        print("style toggled")
-        
         checkNumberOfSwitchesOn(switchStyle)
     }
     
@@ -90,15 +78,46 @@ class SettingsViewController: UIViewController {
         checkNumberOfSwitchesOn(switchGerman)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.darkGrayColor()
-       
-        //Load all categories into typesSelected, probably useless
-        //loadTypes()
+        
+        //First turn all the switches off, then turn the various ones on according the info passed in
+        numSwitchesOn = typesSelected.count
+        if numSwitchesOn == 8 {
+            switchAll.on = true
+        }
+        modifySwitchStates(false)
+        setInitialSwitchStates()
+    }
+    
+    //Function that sets switch states when first loaded, based on info passed from main screen
+    func setInitialSwitchStates() {
+        if typesSelected.contains("dynamics") {
+            switchDynamics.on = true
+        }
+        if typesSelected.contains("tempo") {
+            switchTempo.on = true
+        }
+        if typesSelected.contains("tempoRelated") {
+            switchTempoRelated.on = true
+        }
+        if typesSelected.contains("style") {
+            switchStyle.on = true
+        }
+        if typesSelected.contains("italian") {
+            switchItalian.on = true
+        }
+        if typesSelected.contains("conjunction") {
+            switchConjunction.on = true
+        }
+        if typesSelected.contains("french") {
+            switchFrench.on = true
+        }
+        if typesSelected.contains("german") {
+            switchGerman.on = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,20 +139,17 @@ class SettingsViewController: UIViewController {
     
     //Function that returns type of term based on the int that's passed in
     func returnType(input: Int) -> String {
-        var type = String()
-        
         switch (input) {
-        case 0: type = "dynamics"
-        case 1: type = "tempo"
-        case 2: type = "tempoRelated"
-        case 3: type = "style"
-        case 4: type = "italian"
-        case 5: type = "conjunction"
-        case 6: type = "french"
-        case 7: type = "german"
-        default: type = "not found"
+        case 0: return "dynamics"
+        case 1: return "tempo"
+        case 2: return "tempoRelated"
+        case 3: return "style"
+        case 4: return "italian"
+        case 5: return "conjunction"
+        case 6: return "french"
+        case 7: return "german"
+        default: return "not found"
         }
-        return type
     }
     
     //Function that incremements or decrements switchesOn, will also toggle switchAll based on value of switchesOn

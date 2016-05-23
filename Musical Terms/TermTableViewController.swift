@@ -118,6 +118,12 @@ class TermTableViewController: UITableViewController {
             let detailsVC = segue.destinationViewController as! DetailsViewController
             detailsVC.details = self.data
         }
+        
+        if segue.identifier == "openSettings" {
+            let navController = segue.destinationViewController as! UINavigationController
+            let settingsVC = navController.topViewController as! SettingsViewController
+            settingsVC.typesSelected = self.typesSelected
+        }
     }
     
     func loadTypes() {
