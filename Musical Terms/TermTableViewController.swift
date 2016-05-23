@@ -137,13 +137,16 @@ class TermTableViewController: UITableViewController {
         typesSelected.append("german")
     }
     
+    //Function that deals with unwind segue from the settingsVC
     @IBAction func unwindToTermTable(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? SettingsViewController {
-            
+            //Only modify the table if the typesSelected is different when passed back from the settingsVC
             if self.typesSelected != sourceViewController.typesSelected {
                 self.typesSelected = sourceViewController.typesSelected
+                //Clear and reload table
                 table.removeAll()
                 loadTable()
+                //Refilter the table due to the new settings, then reload the cells
                 filterTableDueToSettings()
                 tableView.reloadData()
             }
