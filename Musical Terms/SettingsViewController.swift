@@ -83,13 +83,18 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.darkGrayColor()
         
+        print(typesSelected.count)
+        
         //First turn all the switches off, then turn the various ones on according the info passed in
+        modifySwitchStates(false)
+        setInitialSwitchStates()
         numSwitchesOn = typesSelected.count
         if numSwitchesOn == 8 {
             switchAll.on = true
         }
-        modifySwitchStates(false)
-        setInitialSwitchStates()
+        else {
+            switchAll.on = false
+        }
     }
     
     //Function that sets switch states when first loaded, based on info passed from main screen
@@ -161,9 +166,6 @@ class SettingsViewController: UIViewController {
             numSwitchesOn -= 1
         }
         
-        //Debug statement
-        print(numSwitchesOn)
-        
         //If the number of switches on is 8, that means all switches are on, so switchAll should be on too
         if (numSwitchesOn == 8) {
             switchAll.on = true
@@ -199,9 +201,13 @@ class SettingsViewController: UIViewController {
     }
     
     //Function that adds the type into typesSelected only if the switch is on and it's not already contained in the array
+    //Otherwise removes it from the array
     func addIntoArray(input: UISwitch, type: String) {
         if input.on && !typesSelected.contains(type) {
             typesSelected.append(type)
+        }
+        else if !input.on && typesSelected.contains(type) {
+            typesSelected.removeAtIndex(typesSelected.indexOf(type)!)
         }
     }
     

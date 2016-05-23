@@ -152,7 +152,7 @@ class TermTableViewController: UITableViewController {
             }
             
             //Debug statements
-            print(self.typesSelected)
+            //print(self.typesSelected)
             print(self.typesSelected.count)
         }
     }
