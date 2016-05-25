@@ -272,6 +272,18 @@ extension TermTableViewController {
         table+=[t78, t79, t80, t81, t82, t83, t84, t85]
         table+=[t86, t87, t88, t89, t90]
         
+        let t91 = Term(text: "Alla, all'", category: "Conjunction Word")
+        let t92 = Term(text: "Assai", category: "Conjunction Word")
+        let t93 = Term(text: "Ben, bene", category: "Conjunction Word")
+        let t94 = Term(text: "Col, coll', colla, colle", category: "Conjunction Word")
+        
+        t91.definition = "in the style of"
+        t92.definition = "very"
+        t93.definition = "well"
+        t94.definition = "with the"
+        
+        table+=[t91, t92, t93, t94]
+        
         //CONJUNCTION WORDS
         
         
@@ -294,6 +306,7 @@ extension TermTableViewController {
             switch table[i].category {
             case "Style": table[i].type = "style"
             case "Other Italian Terms": table[i].type = "italian"
+            case "Conjunction Word": table[i].type = "conjunction"
                 //Unfinished cases, add when rest of terms have been added
             default: table[i].type = ""
             }
