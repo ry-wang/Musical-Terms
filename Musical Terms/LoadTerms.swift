@@ -272,19 +272,39 @@ extension TermTableViewController {
         table+=[t78, t79, t80, t81, t82, t83, t84, t85]
         table+=[t86, t87, t88, t89, t90]
         
+        //CONJUNCTION WORDS
+        
         let t91 = Term(text: "Alla, all'", category: "Conjunction Word")
         let t92 = Term(text: "Assai", category: "Conjunction Word")
         let t93 = Term(text: "Ben, bene", category: "Conjunction Word")
         let t94 = Term(text: "Col, coll', colla, colle", category: "Conjunction Word")
+        
+        let t95 = Term(text: "Con'", category: "Conjunction Word")
+        let t96 = Term(text: "E, ed", category: "Conjunction Word")
+        let t97 = Term(text: "Ma", category: "Conjunction Word")
+        let t98 = Term(text: "Meno", category: "Conjunction Word")
+        
+        let t99 = Term(text: "Molto", category: "Conjunction Word")
+        let t100 = Term(text: "Non", category: "Conjunction Word")
+        let t101 = Term(text: "Non Troppo", category: "Conjunction Word")
+        let t102 = Term(text: "Più", category: "Conjunction Word")
         
         t91.definition = "in the style of"
         t92.definition = "very"
         t93.definition = "well"
         t94.definition = "with the"
         
-        table+=[t91, t92, t93, t94]
+        t95.definition = "with"
+        t96.definition = "and"
+        t97.definition = "but"
+        t98.definition = "less"
         
-        //CONJUNCTION WORDS
+        t99.definition = "much, very"
+        t100.definition = "not"
+        t101.definition = "not too much"
+        
+        table+=[t91, t92, t93, t94]
+        table+=[t95, t96, t97, t98, t99, t100, t101, t102]
         
         
         //ASSIGNING TYPE TO EACH WORD
