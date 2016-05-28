@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var typesSelected = [String]()
+    var typesSelected = Set<String>()
     //Total number of switches
     let totalNumSwitches = 8
     
@@ -189,25 +189,25 @@ class SettingsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //Calls the function that modifies the typesSelected array when the save button is pressed
         if (saveButton === sender) {
-            addIntoArray(switchDynamics, type: "dynamics")
-            addIntoArray(switchTempo, type: "tempo")
-            addIntoArray(switchTempoRelated, type: "tempoRelated")
-            addIntoArray(switchStyle, type: "style")
-            addIntoArray(switchItalian, type: "italian")
-            addIntoArray(switchConjunction, type: "conjunction")
-            addIntoArray(switchFrench, type: "french")
-            addIntoArray(switchGerman, type: "german")
+            addIntoSet(switchDynamics, type: "dynamics")
+            addIntoSet(switchTempo, type: "tempo")
+            addIntoSet(switchTempoRelated, type: "tempoRelated")
+            addIntoSet(switchStyle, type: "style")
+            addIntoSet(switchItalian, type: "italian")
+            addIntoSet(switchConjunction, type: "conjunction")
+            addIntoSet(switchFrench, type: "french")
+            addIntoSet(switchGerman, type: "german")
         }
     }
     
     //Function that adds the type into typesSelected only if the switch is on and it's not already contained in the array
     //Otherwise removes it from the array
-    func addIntoArray(input: UISwitch, type: String) {
-        if input.on && !typesSelected.contains(type) {
-            typesSelected.append(type)
-        }
-        else if !input.on && typesSelected.contains(type) {
-            typesSelected.removeAtIndex(typesSelected.indexOf(type)!)
+    func addIntoSet(input: UISwitch, type: String) {
+        //if input.on && !typesSelected.contains(type) {
+            typesSelected.insert(type)
+        //}
+        if !input.on && typesSelected.contains(type) {
+            typesSelected.remove(type)
         }
     }
     

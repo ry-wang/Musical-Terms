@@ -15,7 +15,7 @@ class TermTableViewController: UITableViewController {
     var filteredTable = [Term]()
     var data: Term!
     
-    var typesSelected = [String]()
+    var typesSelected = Set<String>()
     //Array to store all the terms to be shown after settings are applied
     var categoryTable = [Term]()
     
@@ -127,14 +127,14 @@ class TermTableViewController: UITableViewController {
     }
     
     func loadTypes() {
-        typesSelected.append("dynamics")
-        typesSelected.append("tempo")
-        typesSelected.append("tempoRelated")
-        typesSelected.append("style")
-        typesSelected.append("italian")
-        typesSelected.append("conjunction")
-        typesSelected.append("french")
-        typesSelected.append("german")
+        typesSelected.insert("dynamics")
+        typesSelected.insert("tempo")
+        typesSelected.insert("tempoRelated")
+        typesSelected.insert("style")
+        typesSelected.insert("italian")
+        typesSelected.insert("conjunction")
+        typesSelected.insert("french")
+        typesSelected.insert("german")
     }
     
     //Function that deals with unwind segue from the settingsVC
