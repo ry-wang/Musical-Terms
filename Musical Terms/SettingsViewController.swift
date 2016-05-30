@@ -210,7 +210,5 @@ class SettingsViewController: UIViewController {
             typesSelected.remove(type)
         }
     }
-    
-    
 
 }

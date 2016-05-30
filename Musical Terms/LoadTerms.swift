@@ -335,4 +335,16 @@ extension TermTableViewController {
         print("table loaded")
 
     }
+    
+    //Function that loads all the types into the set
+    func loadTypes() {
+        typesSelected.insert("dynamics")
+        typesSelected.insert("tempo")
+        typesSelected.insert("tempoRelated")
+        typesSelected.insert("style")
+        typesSelected.insert("italian")
+        typesSelected.insert("conjunction")
+        typesSelected.insert("french")
+        typesSelected.insert("german")
+    }
 }

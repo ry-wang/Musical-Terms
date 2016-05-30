@@ -126,17 +126,6 @@ class TermTableViewController: UITableViewController {
         }
     }
     
-    func loadTypes() {
-        typesSelected.insert("dynamics")
-        typesSelected.insert("tempo")
-        typesSelected.insert("tempoRelated")
-        typesSelected.insert("style")
-        typesSelected.insert("italian")
-        typesSelected.insert("conjunction")
-        typesSelected.insert("french")
-        typesSelected.insert("german")
-    }
-    
     //Function that deals with unwind segue from the settingsVC
     @IBAction func unwindToTermTable(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? SettingsViewController {
