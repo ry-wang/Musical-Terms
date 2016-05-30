@@ -289,6 +289,17 @@ extension TermTableViewController {
         let t101 = Term(text: "Non Troppo", category: "Conjunction Word")
         let t102 = Term(text: "Più", category: "Conjunction Word")
         
+        let t103 = Term(text: "Poco'", category: "Conjunction Word")
+        let t104 = Term(text: "Poco a poco", category: "Conjunction Word")
+        let t105 = Term(text: "Quasi", category: "Conjunction Word")
+        let t106 = Term(text: "Sempre", category: "Conjunction Word")
+        
+        let t107 = Term(text: "Senza", category: "Conjunction Word")
+        let t108 = Term(text: "Troppo", category: "Conjunction Word")
+        let t109 = Term(text: "Simile", category: "Conjunction Word")
+        let t110 = Term(text: "Subito, Sub.", category: "Conjunction Word")
+        let t111 = Term(text: "Volta", category: "Conjunction Word")
+        
         t91.definition = "in the style of"
         t92.definition = "very"
         t93.definition = "well"
@@ -302,10 +313,22 @@ extension TermTableViewController {
         t99.definition = "much, very"
         t100.definition = "not"
         t101.definition = "not too much"
+        t102.definition = "more"
+        
+        t103.definition = "little"
+        t104.definition = "little by little"
+        t105.definition = "almost, as if"
+        t106.definition = "always, continuously"
+        
+        t107.definition = "without"
+        t108.definition = "too much"
+        t109.definition = "like; continue in same manner as has just been indicated"
+        t110.definition = "suddenly"
+        t111.definition = "time (prima volta, seconda volta"
         
         table+=[t91, t92, t93, t94]
         table+=[t95, t96, t97, t98, t99, t100, t101, t102]
-        
+        table+=[t103, t104, t105, t106, t107, t108, t109, t110, t111]
         
         //ASSIGNING TYPE TO EACH WORD
         
