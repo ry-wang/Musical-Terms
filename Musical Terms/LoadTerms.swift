@@ -330,6 +330,43 @@ extension TermTableViewController {
         table+=[t95, t96, t97, t98, t99, t100, t101, t102]
         table+=[t103, t104, t105, t106, t107, t108, t109, t110, t111]
         
+        //FRENCH TERMS
+        
+        let t112 = Term(text: "Cédez", category: "French Term")
+        let t113 = Term(text: "Léger", category: "French Term")
+        let t114 = Term(text: "Lentement", category: "French Term")
+        let t115 = Term(text: "Modéré", category: "French Term")
+        let t116 = Term(text: "Mouvement", category: "French Term")
+        let t117 = Term(text: "Vite", category: "French Term")
+        
+        t112.definition = "yield, hold the tempo back"
+        t113.definition = "light; lightly"
+        t114.definition = "slowly"
+        t115.definition = "at a moderate tempo"
+        t116.definition = "tempo; motion"
+        t117.definition = "fast"
+        
+        table+=[t112, t113, t114, t115, t116, t117]
+        
+        //GERMAN TERMS
+        
+        let t118 = Term(text: "Bewegt", category: "German Term")
+        let t119 = Term(text: "Langsam", category: "German Term")
+        let t120 = Term(text: "Mässig", category: "German Term")
+        let t121 = Term(text: "mit Ausdruck", category: "German Term")
+        let t122 = Term(text: "Schnell", category: "German Term")
+        let t123 = Term(text: "Sehr", category: "German Term")
+        
+        t118.definition = "moving"
+        t119.definition = "slow, slowly"
+        t120.definition = "moderate, moderately"
+        t121.definition = "with expression"
+        t122.definition = "fast"
+        t123.definition = "very"
+        
+        table+=[t118, t119, t120, t121, t122, t123]
+        
+        
         //ASSIGNING TYPE TO EACH WORD
         
         //Assigning type to tempoRelated terms
@@ -350,7 +387,8 @@ extension TermTableViewController {
             case "Style": table[i].type = "style"
             case "Other Italian Terms": table[i].type = "italian"
             case "Conjunction Word": table[i].type = "conjunction"
-                //Unfinished cases, add when rest of terms have been added
+            case "French Term": table[i].type = "french"
+            case "German Term": table[i].type = "german"
             default: table[i].type = ""
             }
         }
